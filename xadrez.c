@@ -1,13 +1,14 @@
 #include <stdio.h>
 // Desafio Xadrez - Movimento das peças
-// Nivel novato
+// Nivel aventureiro
 int main() {
     int i = 1, opcao; //declaração das variaveis
-
+    
     printf("Escolha uma peça de xadrez a ser movimentada:\n"); //menu de escolha
     printf("1. Torre\n");
     printf("2. Bispo\n");
     printf("3. Rainha\n");
+    printf("4. Cavalo\n");
     printf("Digite o número correspondente à peça: ");
     scanf("%d", &opcao);
 
@@ -31,8 +32,21 @@ int main() {
                 i++;
             } while (i <= 8);
             break;
+        case 4:
+            for (i = 1; i <= 2; i++) { //loop para repetir o movimento "Cima" duas vezes
+                printf("Cima\n");
+                int j = 1;
+                
+                while (i == 2 && j <= 1) { //loop para mover "Direita" apenas após o segundo "Cima"
+                    printf("Direita\n");
+                    j++;
+                }
+            
+            
+            }
+            break;
         default:
-            printf("Opção inválida. Por favor, escolha 1, 2 ou 3.\n");
+            printf("Opção inválida. Por favor, escolha 1, 2, 3 ou 4.\n");
             break;
     }
 
@@ -40,3 +54,5 @@ int main() {
 
     return 0;
 }
+    
+
